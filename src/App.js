@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Main from "./pages/Main";
 import Caracteristicas from "./pages/Caracteristicas";
+import AcercaDe from "./pages/AcercaDe";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 function App() {
@@ -22,6 +23,10 @@ function App() {
             <Route
               path="/testPages/Caracteristicas"
               element={<Caracteristicas/>}
+            />
+            <Route
+              path="/testPages/Acerca-de"
+              element={<AcercaDe/>}
             />
           </Routes>
         </section>

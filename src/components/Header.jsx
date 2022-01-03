@@ -16,7 +16,7 @@ export default class Header extends Component {
         items:[
             {nombre:"Inicio",ruta:'testPages/'},
             {nombre:"Caracteristicas",ruta:'testPages/Caracteristicas'},
-            {nombre:"Acerca de",ruta:'testPages/#'}]
+            {nombre:"Acerca de",ruta:'testPages/Acerca-de'}]
     };
   }
   render() {

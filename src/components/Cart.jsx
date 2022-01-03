@@ -19,11 +19,16 @@ export default class Cart extends Component {
     }
   }
   componentDidMount() {
-    let dealsPrimarysTemp = [
-        this.props.game.deals[0],
-        this.props.game.deals[1],
-        this.props.game.deals[2]
-    ];
+    let dealsPrimarysTemp = [];
+    if(this.props.game.deals.length>3){
+      dealsPrimarysTemp = [
+          this.props.game.deals[0],
+          this.props.game.deals[1],
+          this.props.game.deals[2]
+      ];
+    }else{
+      dealsPrimarysTemp = this.props.game.deals; 
+    }
     this.setState({dealsPrimarys:dealsPrimarysTemp});
   }
 
