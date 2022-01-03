@@ -14,9 +14,9 @@ export default class Header extends Component {
     super(props);
     this.state = {
         items:[
-            {nombre:"Inicio",ruta:'/'},
-            {nombre:"Caracteristicas",ruta:'/Caracteristicas'},
-            {nombre:"Acerca de",ruta:'/#'}]
+            {nombre:"Inicio",ruta:'testPages/'},
+            {nombre:"Caracteristicas",ruta:'testPages/Caracteristicas'},
+            {nombre:"Acerca de",ruta:'testPages/#'}]
     };
   }
   render() {

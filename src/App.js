@@ -9,18 +9,18 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 function App() {
   return (
     <Router>
-      <div className="d-flex flex-wrap min-vh-100">
+      <div className="d-flex flex-column min-vh-100">
         {/*----------------------Seccion del HEADER -------------------*/}
-        <section className="container align-items-start">
+        <section className="container">
           <Header />
         </section>
         {/*--------------------Seccion del CUERPO --------------------*/}
         <section className="container">
           {/*---------------Seccion de las RUTAS -----------------*/}
           <Routes>
-            <Route exact path="/" element={<Main />} />
+            <Route exact path="/testPages" element={<Main />} />
             <Route
-              path="/Caracteristicas"
+              path="/testPages/Caracteristicas"
               element={<Caracteristicas/>}
             />
           </Routes>

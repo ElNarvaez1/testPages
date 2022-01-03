@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+.new-height{
+  height: calc(100vh - 300px);
+  transition: all 0.9s;
+}
+.new-height.active{
+  height: 180px;;
+}
+
+.img-card{
+ width: 100%;
+ height: 100%;
+ object-fit: contain;
+}
