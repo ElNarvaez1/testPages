@@ -13,6 +13,7 @@ export default class Main extends Component {
       gamesDeals: [],
       page: 0,
       stores: [],
+      sortBy: ''
     };
     this.getGame = this.getGame.bind(this);
   }
