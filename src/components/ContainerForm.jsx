@@ -12,7 +12,7 @@ export default class ContainerForm extends Component {
       >
         <form className="w-100" onSubmit={this.props.getGame}>
           <div className="row justify-content-center">
-            <div className="col-md-5 col-sm-8">
+            <div className="col-md-6 col-sm-8">
               <Form />
             </div>
           </div>

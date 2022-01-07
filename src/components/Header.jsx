@@ -25,7 +25,7 @@ export default class Header extends Component {
         <nav className="navbar navbar-expand-md navbar-light">
           <div className="container-fluid">
             <a className="navbar-brand" href="#">
-              Logo
+              T.Inv II
             </a>
             <button
               className="navbar-toggler"
