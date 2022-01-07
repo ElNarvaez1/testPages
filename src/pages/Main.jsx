@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Form from "../components/Form";
+import ContainerForm from "../components/ContainerForm";
 import Cart from "../components/Cart";
 /**
  *
@@ -13,7 +13,7 @@ export default class Main extends Component {
       gamesDeals: [],
       page: 0,
       stores: [],
-      sortBy: ''
+      sortBy: 'recent'
     };
     this.getGame = this.getGame.bind(this);
   }
@@ -29,7 +29,7 @@ export default class Main extends Component {
   async getGame(e) {
     e.preventDefault();
     //Buscamos un juego por su nombre
-    const URL = `https://www.cheapshark.com/api/1.0/deals?sortBy=Price&pageNumber=${this.state.page}&title=`;
+    const URL = `https://www.cheapshark.com/api/1.0/deals?sortBy=${this.state.sortBy}&pageNumber=${this.state.page}&title=`;
     let nameGame = document.getElementById("inputGame");
     let query = await fetch(URL + nameGame.value);
     let datos = await query.json();
@@ -56,18 +56,7 @@ export default class Main extends Component {
   render() {
     return (
       <>
-        <section
-          className="new-height d-flex justify-content-center align-items-center"
-          id="containerForms"
-        >
-          <form className="w-100" onSubmit={this.getGame}>
-            <div className="row justify-content-center">
-              <div className="col-md-5 col-sm-8">
-                <Form />
-              </div>
-            </div>
-          </form>
-        </section>
+        <ContainerForm getGame={this.getGame}/> 
         <section className="container ">
           <div className="row justify-content-center" >
             {this.state.gamesDeals.map((game, index) => (
